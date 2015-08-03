@@ -1,0 +1,14 @@
+{
+    "name": "atlanticbt/graylogger",
+    "description": "A simple executable for sending a message to a Graylog server using PHP via CLI.",
+    "keywords": ["graylog", "cli"],
+    "authors": [{ "name":"David Campbell", "email":"david@dccampbell.com", "homepage":"http://dccampbell.com" }],
+    "require": {
+        "graylog2/gelf-php": "~1.3",
+        "nategood/commando": "*",
+        "kherge/box": "~2.5"
+    },
+    "scripts": {
+        "post-autoload-dump": "php vendor/kherge/box/bin/box build"
+    }
+}
