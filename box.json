@@ -1,15 +1,12 @@
 {
     "chmod": "0755",
+    "directories": ["src"],
     "finder": [{
-        "name": "*.php",
-        "exclude": [
-            "Tests", "tests", "Test", "test",
-            "doctrine", "justinrainbow", "kherge", 
-            "phine", "seld", "symfony", "tedivm"
-        ],
-        "in": "vendor"
+        "exclude": ["tests"],
+        "in": "vendor",
+        "name": "*.php"
     }],
-    "main": "graylogger.php",
-    "output": "graylogger.phar",
+    "main": "src/main.php",
+    "output": "dist/graylogger.phar",
     "stub": true
 }

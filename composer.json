@@ -5,10 +5,18 @@
     "authors": [{ "name":"David Campbell", "email":"david@dccampbell.com", "homepage":"http://dccampbell.com" }],
     "require": {
         "graylog2/gelf-php": "~1.3",
-        "nategood/commando": "*",
-        "kherge/box": "~2.5"
+        "nategood/commando": "*"
     },
+    "autoload": {
+        "psr-4": {
+            "Graylogger\\": "src"
+        }
+    },
+    "bin": [
+        "dist/graylogger.phar",
+        "box.phar"
+    ],
     "scripts": {
-        "post-autoload-dump": "php vendor/kherge/box/bin/box build"
+        "post-autoload-dump": "php box.phar build"
     }
 }
